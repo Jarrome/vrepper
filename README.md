@@ -3,6 +3,22 @@
 Tethered V-REP (using V-REP as a remote controlled multi-body simulator) in Python.
 
 
+
+
+
+The forked repo is for my ARM-projects. I need to ensure it is Reproducible to use in my proj.
+
+**NEW: 2018 14. Nov**
+- Change the stop_blocking_simulation -> stop_simultion in test_cartpole.py
+- Change the _step->step, _reset->reset in test_cartpole.py
+- pip_list_mac with `pip list > pip_list_mac` on my MacBook Pro (macOS Mojave. version 10.14.1 (18B75))
+
+
+
+
+---   
+		from  fgolemo/vrepper
+
 THIS IS A FORK FROM https://github.com/ctmakro/vrepper, WITH SOME ADDITIONAL FEATURES:
 
 - Linux support

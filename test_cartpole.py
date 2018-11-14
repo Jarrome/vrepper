@@ -40,7 +40,7 @@ class CartPoleVREPEnv(gym.Env):
             massvel[0],massvel[2]
             ]).astype('float32')
 
-    def _step(self,actions):
+    def step(self,actions):
         actions = np.clip(actions, -1, 1)
         v = actions[0]
 
@@ -57,14 +57,14 @@ class CartPoleVREPEnv(gym.Env):
 
         return self.observation, -cost, False, {}
 
-    def _reset(self):
-        self.venv.stop_blocking_simulation()
+    def reset(self):
+        self.venv.stop_simulation()
         self.venv.start_blocking_simulation()
         self._self_observe()
         return self.observation
 
     def _destroy(self):
-        self.venv.stop_blocking_simulation()
+        self.venv.stop_simulation()
         self.venv.end()
 
 if __name__ == '__main__':
