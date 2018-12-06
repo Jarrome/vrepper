@@ -77,6 +77,16 @@ class vrepobject():
         """
         pos = (x, y, z)
         return check_ret(self.env.simxSetObjectPosition(self.handle, -1, pos, blocking))
+ 
+    def set_orientation(self, x, y, z):
+        """
+        Set object to specific position (should never be done with joints)
+        :param pos:  tuple or list with 3 Euler angles (alpha, beta and gamma)
+        :return: None
+        """
+        pos = (x, y, z)
+        return check_ret(self.env.simxSetObjectOrientation(self.handle, -1, pos, blocking))
+                                
 
     def get_joint_angle(self):
         self._check_joint()
