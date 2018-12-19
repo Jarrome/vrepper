@@ -209,6 +209,11 @@ class vrepper(object):
     def step_blocking_simulation(self):
         check_ret(self.simxSynchronousTrigger())
 
+
+    def pause_communication(self, pause = False):
+        check_ret(self.simxPauseCommunication(pause))
+
+
     def get_object_handle(self, name):
         handle, = check_ret(self.simxGetObjectHandle(name, blocking))
         return handle

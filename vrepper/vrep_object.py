@@ -1,5 +1,5 @@
 from vrepper.lib.vrepConst import sim_jointfloatparam_velocity, simx_opmode_buffer, simx_opmode_streaming
-from vrepper.utils import check_ret, blocking
+from vrepper.utils import check_ret, blocking, oneshot
 import numpy as np
 
 class vrepobject():
