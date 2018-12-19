@@ -54,7 +54,7 @@ class vrepobject():
         return check_ret(self.env.simxSetJointTargetPosition(
             self.handle,
             -np.deg2rad(angle),
-            blocking))
+            oneshot), True)
 
     def force_position(self, angle):
         """

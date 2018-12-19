@@ -17,6 +17,7 @@ vrep.simxSetJointPosition(clientID,joint2Handle,joint2Value,vrep.simx_opmode_one
 vrep.simxSetJointPosition(clientID,joint3Handle,joint3Value,vrep.simx_opmode_oneshot)
 vrep.simxPauseCommunication(clientID,False)
 ```
+- change set_position_target with oneshot mode
 
 **NEW: 2018 14. Nov**
 - Change the stop_blocking_simulation -> stop_simultion in test_cartpole.py
