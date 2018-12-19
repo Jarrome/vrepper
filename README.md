@@ -8,6 +8,16 @@ Tethered V-REP (using V-REP as a remote controlled multi-body simulator) in Pyth
 
 The forked repo is for my ARM-projects. I need to ensure it is Reproducible to use in my proj.
 
+**NEW: 2018 18. Dec**
+- add pause_communication for asynchronize use to allow running several setJointTargetPosition at one time
+```
+vrep.simxPauseCommunication(clientID,True)
+vrep.simxSetJointPosition(clientID,joint1Handle,joint1Value,vrep.simx_opmode_oneshot)
+vrep.simxSetJointPosition(clientID,joint2Handle,joint2Value,vrep.simx_opmode_oneshot)
+vrep.simxSetJointPosition(clientID,joint3Handle,joint3Value,vrep.simx_opmode_oneshot)
+vrep.simxPauseCommunication(clientID,False)
+```
+
 **NEW: 2018 14. Nov**
 - Change the stop_blocking_simulation -> stop_simultion in test_cartpole.py
 - Change the _step->step, _reset->reset in test_cartpole.py
